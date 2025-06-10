@@ -14,7 +14,7 @@ param parTopLevelManagementGroupSuffix string = ''
 
 @sys.description('Display name for top level management group. This name will be applied to the management group prefix defined in parTopLevelManagementGroupPrefix parameter.')
 @minLength(2)
-param parTopLevelManagementGroupDisplayName string = 'Azure Landing Zones'
+param parTopLevelManagementGroupDisplayName string = 'Buckman Azure Landing Zones Management Groups'
 
 @sys.description('Optional parent for Management Group hierarchy, used as intermediate root Management Group parent, if specified. If empty, default, will deploy beneath Tenant Root Management Group.')
 param parTopLevelManagementGroupParentId string = ''
@@ -29,10 +29,14 @@ param parPlatformMgAlzDefaultsEnable bool = true
 param parLandingZoneMgConfidentialEnable bool = false
 
 @sys.description('Dictionary Object to allow additional or different child Management Groups of Landing Zones Management Group to be deployed.')
-param parLandingZoneMgChildren object = {}
+param parLandingZoneMgChildren object = {
+
+  // Confidential Corp and Confidential Online will be added if parLandingZoneMgConfidentialEnable is true
+}
 
 @sys.description('Dictionary Object to allow additional or different child Management Groups of Platform Management Group to be deployed.')
-param parPlatformMgChildren object = {}
+param parPlatformMgChildren object = {
+}
 
 @sys.description('Set Parameter to true to Opt-out of deployment telemetry.')
 param parTelemetryOptOut bool = false
@@ -64,11 +68,14 @@ var varLandingZoneMg = {
 
 // Used if parLandingZoneMgAlzDefaultsEnable == true
 var varLandingZoneMgChildrenAlzDefault = {
-  corp: {
-    displayName: 'Corp'
+  Americas: {
+    displayName: 'Americas'
   }
-  online: {
-    displayName: 'Online'
+  Opcos: {
+    displayName: 'Operating Companies'
+  }
+  Digital: {
+    displayName: 'Digital'
   }
 }
 

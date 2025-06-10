@@ -3,10 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parAssignableScopeManagementGroupId": {
-      "value": "alz"
+      "value": "Buckman"
     },
     "parTelemetryOptOut": {
       "value": false
     }
   }
 }
+

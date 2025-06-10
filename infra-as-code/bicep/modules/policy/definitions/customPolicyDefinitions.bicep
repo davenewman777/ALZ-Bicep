@@ -1,10 +1,10 @@
 targetScope = 'managementGroup'
 
-metadata name = 'ALZ Bicep - Custom Policy Defitions at Management Group Scope'
+metadata name = 'ALZ Bicep - Custom Policy Definitions at Management Group Scope'
 metadata description = 'This policy definition is used to deploy custom policy definitions at management group scope'
 
 @sys.description('The management group scope to which the policy definitions are to be created at.')
-param parTargetManagementGroupId string = 'alz'
+param parTargetManagementGroupId string = 'Buckman'
 
 @sys.description('Set Parameter to true to Opt-out of deployment telemetry')
 param parTelemetryOptOut bool = false

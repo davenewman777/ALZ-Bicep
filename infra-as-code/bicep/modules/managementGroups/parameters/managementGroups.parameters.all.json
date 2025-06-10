@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parTopLevelManagementGroupPrefix": {
-      "value": "alz"
+      "value": "Buckman"
     },
     "parTopLevelManagementGroupSuffix": {
       "value": ""
     },
     "parTopLevelManagementGroupDisplayName": {
-      "value": "Azure Landing Zones"
+      "value": "Buckman Root Management Group"
     },
     "parTopLevelManagementGroupParentId": {
       "value": ""
@@ -25,7 +25,8 @@
     },
     "parLandingZoneMgChildren": {
       "value": {}
-    },
+  },
+
     "parPlatformMgChildren": {
       "value": {}
     },
